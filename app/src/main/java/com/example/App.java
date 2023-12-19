@@ -8,6 +8,10 @@ public class App {
         return "Hello World!";
     }
 
+    String testMe() {
+        return "I need to be tested";
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }
