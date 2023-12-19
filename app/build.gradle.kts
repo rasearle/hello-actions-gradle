@@ -9,6 +9,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("jacoco")
+    id("org.sonarqube") version "4.4.1.3373"
 }
 
 repositories {
@@ -32,4 +34,23 @@ application {
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport) // report is always generated after tests run
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test) // tests are required to run before generating the report
+    reports {
+        xml.required = true
+    }
+}
+
+sonar {
+  properties {
+    property("sonar.projectKey", "rasearle_hello-actions-gradle")
+    property("sonar.organization", "rasearle")
+    property("sonar.host.url", "https://sonarcloud.io")
+  }
 }
