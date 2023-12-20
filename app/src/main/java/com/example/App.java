@@ -12,6 +12,10 @@ public class App {
         return "I need to be tested";
     }
 
+    String anotherMethodToTest() {
+        return "I also need to be tested";
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }

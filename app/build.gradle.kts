@@ -52,5 +52,6 @@ sonar {
     property("sonar.projectKey", "rasearle_hello-actions-gradle")
     property("sonar.organization", "rasearle")
     property("sonar.host.url", "https://sonarcloud.io")
+    property("sonar.qualitygate.wait", "true")
   }
 }
