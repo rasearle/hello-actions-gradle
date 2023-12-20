@@ -52,8 +52,5 @@ sonar {
     property("sonar.projectKey", "rasearle_hello-actions-gradle")
     property("sonar.organization", "rasearle")
     property("sonar.host.url", "https://sonarcloud.io")
-    // uncomment below to fail build on quality-gate failure, but this may not be necessary as
-    //   QG failure will show as a failed check in the pipeline anyway
-    // property("sonar.qualitygate.wait", "true")
   }
 }
