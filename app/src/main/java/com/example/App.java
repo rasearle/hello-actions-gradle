@@ -8,6 +8,41 @@ public class App {
         return "Hello World!";
     }
 
+    String testMe() {
+        return "I need to be tested";
+    }
+
+    String anotherMethodToTest() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("I read something about line coverage ");
+        sb.append("not being calculated ");
+        sb.append("if there were fewer than 20 new lines, ");
+        sb.append("so let's ramp up the number of new, untested lines. ");
+        sb.append("(That's for SonarCloud, apparently it's OK in SonarQube.) ");
+        sb.append("1");
+        sb.append("2");
+        sb.append("3");
+        sb.append("4");
+        sb.append("5");
+        sb.append("6");
+        sb.append("7");
+        sb.append("8");
+        sb.append("9");
+        sb.append("10");
+        sb.append("11");
+        sb.append("12");
+        sb.append("13");
+        sb.append("14");
+        sb.append("15");
+        sb.append("16");
+        sb.append("17");
+        sb.append("18");
+        sb.append("19");
+        sb.append("20");
+
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }
