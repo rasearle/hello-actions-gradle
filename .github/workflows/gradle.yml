@@ -58,4 +58,6 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }} #OPTIONAL
+        SONAR_PROJECT_KEY: rasearle_hello-actions-gradle
+        SONAR_ORGANIZATION: rasearle
         
